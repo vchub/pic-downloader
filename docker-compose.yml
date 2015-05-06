@@ -1,0 +1,18 @@
+run:
+  build: .
+  command: python app.py
+  volumes:
+   - ./code:/code
+   - ./pics:/pics
+test:
+  build: .
+  command: py.test -s app.py
+  volumes:
+   - ./code:/code
+   - ./pics:/pics
+bash:
+  build: .
+  command: /bin/bash
+  volumes:
+   - ./code:/code
+   - ./pics:/pics
