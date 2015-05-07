@@ -1,6 +1,6 @@
 FROM python:2.7-onbuild
 ADD . /code
-# ADD ./pics /pics
+ADD ./pics /code/pics
 WORKDIR /code
 RUN pip install -r requirements.txt
 # ADD requirements.txt /code/ /pics/
