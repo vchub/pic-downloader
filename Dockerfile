@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 # ADD . /code
 
 # CMD python app.py
-CMD py.test -s /code/code/app.py
-CMD python /code/code/app.py
+# CMD py.test -s /code/code/app.py
+# CMD python /code/code/app.py
 
 
