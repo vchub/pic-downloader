@@ -38,11 +38,11 @@ http = credentials.authorize(http)
 drive_service = build('drive', 'v2', http=http)
 
 # Insert a file
-media_body = MediaFileUpload(FILENAME, mimetype='text/plain', resumable=True)
+media_body = MediaFileUpload(FILENAME, mimetype='application/zip, application/octet-stream', resumable=True)
 body = {
-  'title': 'kinder2014 pics',
+  'title': 'kinder2014_pics.zip',
   'description': 'kinder2014 pics',
-  'mimeType': 'binary'
+  'mimeType': 'application/zip, application/octet-stream'
 }
 
 file = drive_service.files().insert(body=body, media_body=media_body).execute()
